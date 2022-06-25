@@ -9,9 +9,9 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MainLayout(title: "Home Screen", children: [
       ElevatedButton(
-        onPressed: () {
-          Navigator.of(context).push(MaterialPageRoute(
-              builder: (BuildContext context) => RouteOneScreen()));
+        onPressed: () async {
+          final result = await Navigator.of(context).push(MaterialPageRoute(
+              builder: (BuildContext context) => RouteOneScreen(number: 1)));
         },
         child: Text("Push"),
       )
